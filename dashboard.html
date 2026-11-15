@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Savora | Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="savora-dashboard">
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+
+    <h2 class="sidebar-brand">Savora<span>.</span></h2>
+
+    <div class="sidebar-image">
+        <img src="./assets/savora-food.jpeg" alt="Savora Food">
+        <p>Made with love</p>
+        <small>Discover something delicious.</small>
+    </div>
+
+    <nav class="sidebar-menu">
+        <a href="./home.html">Home</a>
+        <a href="./dashboard.html" class="active">Dashboard</a>
+        <a href="./recipes.html">All Recipes</a>
+        <a href="./categories.html">Categories</a>
+        <a href="./favourites.html">Favourites</a>
+        <a href="./reports.html">Reports</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <a href="./index.html" class="sidebar-logout">Log Out</a>
+        <small>© 2026 Savora Kitchen</small>
+    </div>
+
+</aside>
+
+       
+
+        <!-- MAIN CONTENT -->
+        <main class="dashboard-main">
+
+            <!-- TOP HEADER -->
+            <header class="dashboard-header">
+                <div>
+                    <span class="dashboard-date">YOUR PERSONAL RECIPE SPACE</span>
+                    <h4>Good Afternoon!</h4>
+                    <p>Welcome back to your kitchen.</p>
+                </div>
+
+                <div class="user-profile">
+                    <span>MA</span>
+                </div>
+            </header>
+
+            <!-- PAGE INTRO -->
+            <section class="dashboard-intro">
+                <div>
+                    <p class="section-eyebrow">A LITTLE TASTE OF HOME</p>
+                    <h1>Your Kitchen,<br> Your Collection.</h1>
+                    <p class="intro-description">
+                        Keep your favourite recipes close and discover
+                        something wonderful to cook today.
+                    </p>
+                </div>
+
+                <a href="./recipes.html" class="dashboard-cta">
+                    Explore Recipes
+                </a>
+            </section>
+
+            <!-- STATISTICS -->
+            <section class="dashboard-stats">
+
+                <div class="stat-card">
+                    <span class="stat-label">TOTAL RECIPES</span>
+                    <h2>12</h2>
+                    <p>Your growing collection</p>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-label">CATEGORIES</span>
+                    <h2>6</h2>
+                    <p>Flavours to explore</p>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-label">FAVOURITES</span>
+                    <h2>4</h2>
+                    <p>Recipes you love most</p>
+                </div>
+
+            </section>
+
+            <!-- RECIPE STATISTICS -->
+            <section class="chart-section">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="section-eyebrow">KNOW YOUR COLLECTION</p>
+                        <h3>Recipe Statistics</h3>
+                        <p>Explore your recipes by category.</p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="recipeChart"></canvas>
+                </div>
+
+            </section>
+
+            <!-- RECENT RECIPES -->
+            <section class="recent-section">
+
+                <div class="recent-heading">
+                    <div>
+                        <p class="section-eyebrow">FRESH FROM YOUR COLLECTION</p>
+                        <h3>Recent Recipes</h3>
+                        <p>Your latest cooking inspirations.</p>
+                    </div>
+
+                    <a href="./recipes.html" class="view-all-link">
+                        View All Recipes →
+                    </a>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-4 mb-3">
+                        <div class="recipe-card">
+                            <img src="./assets/pasta.jpeg" alt="Creamy Pasta">
+                            <div class="recipe-info">
+                                <h5>Creamy Pasta</h5>
+                                <p>Italian Cuisine</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class="recipe-card">
+                            <img src="./assets/chicken.jpeg" alt="Grilled Chicken">
+                            <div class="recipe-info">
+                                <h5>Grilled Chicken</h5>
+                                <p>Main Course</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class="recipe-card">
+                            <img src="./assets/cake.jpeg" alt="Chocolate Cake">
+                            <div class="recipe-info">
+                                <h5>Chocolate Cake</h5>
+                                <p>Dessert</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="dashboard-footer">
+                <p>Made with love, served by Savora.</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- CHART.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Savora | All Recipes</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="savora-recipes">
+
+    <div class="dashboard-layout">
+
+        
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+    <h2 class="sidebar-brand">Savora<span>.</span></h2>
+
+    <div class="sidebar-image">
+        <img src="./assets/savora-food.jpeg">
+        <p>Made with love</p>
+        <small>Discover something delicious.</small>
+    </div>
+
+    <nav class="sidebar-menu">
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="./recipes.html" class="active">All Recipes</a>
+        <a href="./categories.html">Categories</a>
+        <a href="./favourites.html">Favourites</a>
+        <a href="./reports.html">Reports</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <a href="./index.html" class="sidebar-logout">Log Out</a>
+        <small>© 2026 Savora Kitchen</small>
+    </div>
+
+</aside>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="dashboard-main">
+
+            <!-- HEADER -->
+            <div class="dashboard-header recipe-page-header">
+
+                <div>
+                    <h4>My Recipe Collection</h4>
+                    <p>Keep all your favourite recipes in one place.</p>
+                </div>
+
+                <div class="user-profile">
+                    <span>MA</span>
+                </div>
+
+            </div>
+
+            <!-- PAGE INTRO -->
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+
+                <div>
+                    <h1>All Recipes</h1>
+                    <p>Explore delicious recipes for every occasion.</p>
+                </div>
+
+                <button class="btn login-button" id="addRecipeBtn">
+                    + Add New Recipe
+                </button>
+
+            </div>
+
+            <!-- RECIPE TOOLBAR -->
+            <div class="recipe-toolbar">
+
+                <div class="recipe-search">
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="text"
+                        id="searchRecipe"
+                        class="form-control"
+                        placeholder="Search your favourite recipes..."
+                    >
+                </div>
+
+                <div class="recipe-toolbar-bottom">
+
+                    <div class="recipe-filter">
+                        <select id="filterCategory" class="form-select">
+                            <option value="">All Categories</option>
+                            <option value="Italian Cuisine">Italian Cuisine</option>
+                            <option value="Main Course">Main Course</option>
+                            <option value="Dessert">Dessert</option>
+                            <option value="Korean Cuisine">Korean Cuisine</option>
+                            <option value="Bakery">Bakery</option>
+                            <option value="Drinks">Drinks</option>
+                        </select>
+                    </div>
+
+                    <div class="recipe-sort">
+                        <select id="sortRecipes" class="form-select">
+                            <option value="">Sort Recipes</option>
+                            <option value="az">Name: A to Z</option>
+                            <option value="za">Name: Z to A</option>
+                        </select>
+                    </div>
+
+                    <div class="recipe-counter">
+                        Showing <span id="recipeCount">12</span> recipes
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RECIPE LIST -->
+            <div class="row" id="recipeList">
+
+                <!-- 1. CREAMY PASTA -->
+                <div class="col-md-4 mb-4">
+                    <div class="recipe-card">
+                        <img src="./assets/pasta.jpeg" alt="Creamy Pasta">
+                        <div class="recipe-info">
+                            <h5>Creamy Pasta</h5>
+                            <div class="category-row">
+                                <p>Italian Cuisine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. GRILLED CHICKEN -->
+                <div class="col-md-4 mb-4">
+                    <div class="recipe-card">
+                        <img src="./assets/chicken.jpeg" alt="Grilled Chicken">
+                        <div class="recipe-info">
+                            <h5>Grilled Chicken</h5>
+                            <div class="category-row">
+                                <p>Main Course</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. CHOCOLATE CAKE -->
+                <div class="col-md-4 mb-4">
+                    <div class="recipe-card">
+                        <img src="./assets/cake.jpeg" alt="Chocolate Cake">
+                        <div class="recipe-info">
+                            <h5>Chocolate Cake</h5>
+                            <div class="category-row">
+                                <p>Dessert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. ROSE TTEOKBOKKI -->
+                <div class="col-md-4 mb-4">
+                    <div class="recipe-card">
+                        <img src="./assets/rose-tteokbokki.jpeg" alt="Rose Tteokbokki">
+                        <div class="recipe-info">
+                            <h5>Rose Tteokbokki</h5>
+                            <div class="category-row">
+                                <p>Korean Cuisine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. BOLOGNESE PASTA -->
+                <div class="col-md-4 mb-4">
+                    <div class="recipe-card">
+                        <img src="./assets/bolognese.jpeg" alt="Bolognese Pasta">
+                        <div class="recipe-info">
+                            <h5>Bolognese Pasta</h5>
+                            <div class="category-row">
+                                <p>Italian Cuisine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. CARAMEL PUDDING -->
+                <div class="col-md-4 mb-4">
+                    <div class="recipe-card">
+                        <img src="./assets/caramel-pudding.jpeg" alt="Caramel Pudding">
+                        <div class="recipe-info">
+                            <h5>Caramel Pudding</h5>
+                            <div class="category-row">
+                                <p>Dessert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. GARLIC CREAM CHEESE BREAD -->
+                <div class="col-md-4 mb-4">
+                    <div class="recipe-card">
+                        <img src="./assets/garlic-bread.jpeg" alt="Garlic Cream Cheese Bread">
+                        <div class="recipe-info">
+                            <h5>Garlic Cream Cheese Bread</h5>
+                            <div class="category-row">
+                                <p>Bakery</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. BURNT CHEESECAKE -->
+                <div class="col-md-4 mb-4">
+                    <div class="recipe-card">
+                        <img src="./assets/burnt-cheesecake.jpeg" alt="Burnt Cheesecake">
+                        <div class="recipe-info">
+                            <h5>Burnt Cheesecake</h5>
+                            <div class="category-row">
+                                <p>Dessert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. STRAWBERRY SMOOTHIE -->
+                <div class="col-md-4 mb-4">
+                    <div class="recipe-card">
+                        <img src="./assets/strawberry-smoothie.jpeg" alt="Strawberry Smoothie">
+                        <div class="recipe-info">
+                            <h5>Strawberry Smoothie</h5>
+                            <div class="category-row">
+                                <p>Drinks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. STRAWBERRY SPARKLING -->
+                <div class="col-md-4 mb-4">
+                    <div class="recipe-card">
+                        <img src="./assets/strawberry-sparkling.jpeg" alt="Strawberry Sparkling">
+                        <div class="recipe-info">
+                            <h5>Strawberry Sparkling</h5>
+                            <div class="category-row">
+                                <p>Drinks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. VELVET LATTE -->
+                <div class="col-md-4 mb-4">
+                    <div class="recipe-card">
+                        <img src="./assets/velvet-latte.jpeg" alt="Velvet Latte">
+                        <div class="recipe-info">
+                            <h5>Velvet Latte</h5>
+                            <div class="category-row">
+                                <p>Drinks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12. STRAWBERRY CHEESECAKE -->
+                <div class="col-md-4 mb-4">
+                    <div class="recipe-card">
+                        <img src="./assets/cheesecake.jpeg" alt="Strawberry Cheesecake">
+                        <div class="recipe-info">
+                            <h5>Strawberry Cheesecake</h5>
+                            <div class="category-row">
+                                <p>Dessert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- ADD RECIPE MODAL -->
+    <div class="modal fade" id="addRecipeModal" tabindex="-1"
+        aria-labelledby="addRecipeModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addRecipeModalLabel">
+                        Add New Recipe
+                    </h5>
+
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- RECIPE NAME -->
+                    <div class="mb-3">
+                        <label for="recipeName" class="form-label">Recipe Name</label>
+                        <input type="text" id="recipeName" class="form-control"
+                            placeholder="Enter recipe name">
+                    </div>
+
+                    <!-- CATEGORY -->
+                    <div class="mb-3">
+                        <label for="recipeCategory" class="form-label">Category</label>
+
+                        <select id="recipeCategory" class="form-select">
+                            <option value="">Select Category</option>
+                            <option value="Main Course">Main Course</option>
+                            <option value="Dessert">Dessert</option>
+                            <option value="Italian Cuisine">Italian Cuisine</option>
+                            <option value="Korean Cuisine">Korean Cuisine</option>
+                            <option value="Bakery">Bakery</option>
+                            <option value="Drinks">Drinks</option>
+                        </select>
+                    </div>
+
+                    <!-- RECIPE IMAGE -->
+                    <div class="mb-3">
+                        <label for="recipeImage" class="form-label">Recipe Image</label>
+                        <input type="file" id="recipeImage" class="form-control"
+                            accept="image/*">
+                    </div>
+
+                </div>
+
+                <!-- MODAL BUTTONS -->
+                <div class="modal-footer">
+
+                    <button type="button"
+                        class="btn modal-action-btn cancel-btn"
+                        data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+
+                    <button type="button"
+                        class="btn modal-action-btn save-btn"
+                        id="saveRecipeBtn">
+                        Save Recipe
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/recipes.js"></script>
+
+    <script>
+        const addRecipeBtn = document.getElementById("addRecipeBtn");
+        const addRecipeModalElement = document.getElementById("addRecipeModal");
+
+        const addRecipeModal = new bootstrap.Modal(addRecipeModalElement);
+
+        addRecipeBtn.addEventListener("click", function () {
+            addRecipeModal.show();
+        });
+    </script>
+
+</body>
+</html>
