@@ -1,0 +1,4384 @@
+
+/* =========================================
+   SAVORA - MAIN STYLESHEET
+   Consolidated Premium Version
+========================================= */
+
+/* 1. GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #EDE2D3;
+    color: #583D2E;
+    background-image: none;
+}
+
+/* 2. LOGIN PAGE */
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background-image:
+        linear-gradient(rgba(40, 30, 20, 0.35), rgba(40, 30, 20, 0.35)),
+        url("../assets/login-bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 380px;
+    background-color: #F5EFE6;
+    padding: 30px 32px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.brand-name {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #765B45;
+}
+
+.brand-tagline {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #9B8068;
+    margin-bottom: 22px;
+}
+
+.login-card h1 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: #765B45;
+}
+
+.welcome-text {
+    color: #8B7765;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    color: #594635;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-control {
+    background-color: #FFFCF7;
+    border: 1px solid #DED0BF;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 13px;
+}
+
+.form-control:focus {
+    border-color: #9B8068;
+    box-shadow: 0 0 0 0.2rem rgba(155, 128, 104, 0.15);
+}
+
+.login-button {
+    background-color: #765B45;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: #594331;
+    color: white;
+}
+
+.login-footer {
+    color: #9B8068;
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+/* 3. GENERAL DASHBOARD */
+.navbar {
+    background-color: #FFFCF7 !important;
+    border-bottom: 1px solid #E5D5C3;
+}
+
+.navbar-brand {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: #765B45 !important;
+}
+
+.container {
+    max-width: 1150px;
+}
+
+.container h1 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    color: #382B22;
+    font-weight: bold;
+}
+
+.container > p {
+    color: #9B8068;
+    font-size: 15px;
+}
+
+.card {
+    background-color: #FFFCF7;
+    border: 1px solid #E5D5C3;
+    border-radius: 15px;
+    padding: 25px !important;
+    box-shadow: 0 5px 15px rgba(80, 55, 35, 0.06);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(80, 55, 35, 0.12);
+}
+
+.card h5 {
+    color: #9B8068;
+    font-size: 14px;
+}
+
+.card h2 {
+    color: #765B45;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.card p {
+    color: #A58D78;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   4. GENERAL SIDEBAR
+========================================= */
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #382B22;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.sidebar-brand {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #F5EFE6;
+    text-align: left;
+    margin: 12px 0 20px;
+    padding-left: 10px;
+}
+
+.sidebar-image {
+    background-color: #765B45;
+    padding: 10px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar-image img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.sidebar-image p {
+    color: #FFFCF7;
+    margin: 10px 0 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.sidebar-image small {
+    color: #E5D5C3;
+    font-size: 11px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: #E5D5C3;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background-color: #B99A7B;
+    color: #24150F;
+}
+
+.sidebar-logout {
+    margin-top: auto;
+    text-decoration: none;
+    color: #E5D5C3;
+    padding: 12px 15px;
+}
+
+/* MOBILE PORTRAIT */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    body.savora-dashboard .dashboard-layout {
+        flex-direction: column !important;
+    }
+
+    body.savora-dashboard .sidebar {
+        width: 100% !important;
+        min-width: 100% !important;
+        min-height: auto !important;
+        height: auto !important;
+        box-sizing: border-box !important;
+        background-color: #24150F !important;
+        padding: 15px !important;
+    }
+
+    body.savora-dashboard .sidebar-brand {
+        font-size: 30px !important;
+        margin: 0 0 12px !important;
+    }
+
+    body.savora-dashboard .sidebar-image {
+        display: none !important;
+    }
+
+    body.savora-dashboard .sidebar-menu {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+    }
+
+    body.savora-dashboard .sidebar-menu a {
+        font-size: 11px !important;
+        padding: 8px !important;
+    }
+
+    body.savora-dashboard .sidebar-bottom {
+        position: static !important;
+        margin-top: 10px !important;
+    }
+}
+
+/* 5. GENERAL MAIN CONTENT */
+.dashboard-main {
+    flex: 1;
+    min-width: 0;
+    padding: 45px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    padding: 20px 25px;
+    background-color: #FFFCF7;
+    border-radius: 15px;
+    border: 1px solid #E5D5C3;
+}
+
+.dashboard-header h4 {
+    font-family: Georgia, serif;
+    color: #382B22;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.dashboard-header p {
+    color: #9B8068;
+    font-size: 13px;
+    margin: 0;
+}
+
+.user-profile span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: #765B45;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.recent-section {
+    margin-top: 40px;
+}
+
+.recent-section h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #382B22;
+    font-weight: bold;
+}
+
+.recent-section p {
+    color: #9B8068;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* 6. GENERAL RECIPE CARDS */
+.recipe-card {
+    position: relative;
+    background-color: #FFFCF7;
+    border: 1px solid #E5D5C3;
+    border-radius: 15px;
+    overflow: visible;
+    transition: 0.3s;
+    height: 100%;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(80, 55, 35, 0.12);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+
+.recipe-info {
+    padding: 18px;
+}
+
+.recipe-info h5 {
+    color: #382B22;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.recipe-info p {
+    color: #9B8068;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* 7. RECIPE CATEGORY ROW */
+.category-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.category-row p {
+    margin: 0;
+}
+
+/* 8. THREE-DOT MENU */
+.recipe-menu {
+    position: relative;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.recipe-menu summary {
+    list-style: none;
+    cursor: pointer;
+    color: #765B45;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.recipe-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.recipe-menu[open] {
+    z-index: 100;
+}
+
+.recipe-menu-options {
+    position: absolute;
+    right: 0;
+    top: 28px;
+    width: 145px;
+    background: #FFFCF7;
+    border: 1px solid #DCC3AA;
+    border-radius: 6px;
+    padding: 6px;
+    z-index: 999;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-menu-options button {
+    display: block;
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: left;
+    padding: 10px;
+    border-radius: 6px;
+    color: #8B2929;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.recipe-menu-options button:hover {
+    background-color: #F5EFE6;
+}
+
+/* 9. RECIPE STATISTICS CHART */
+.chart-section {
+    margin-top: 35px;
+    padding: 25px;
+    background-color: #FFFCF7;
+    border: 1px solid #E5D5C3;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(36, 21, 15, 0.06);
+}
+
+.chart-section h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #24150F;
+    font-weight: bold;
+}
+
+.chart-section > p {
+    color: #9B8068;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+/* =========================================
+   10. HOMEPAGE
+   Original homepage design preserved
+========================================= */
+
+.home-page {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #F5EFE6;
+    color: #382B22;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.home-page .home-footer {
+    margin-bottom: 0;
+}
+
+/* HOMEPAGE NAVBAR */
+.home-navbar {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    min-height: 90px;
+    padding: 18px 6%;
+    background: #24150F;
+    border-bottom: 1px solid rgba(229, 213, 195, 0.18);
+    box-shadow: 0 5px 20px rgba(35, 23, 16, 0.12);
+}
+
+.home-logo {
+    color: #F5EFE6;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-decoration: none;
+    line-height: 1.1;
+    flex-shrink: 0;
+}
+
+.home-logo span {
+    display: block;
+    color: #C5A788;
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    letter-spacing: 3.5px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.home-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+}
+
+.home-nav-links a {
+    color: #E5D5C3;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    transition: 0.3s ease;
+}
+
+.home-nav-links a:hover,
+.home-nav-links a.active {
+    color: #CBA77F;
+}
+
+.home-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-reserve-button {
+    background: #C5A788;
+    color: #24150F;
+    padding: 14px 25px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 1px solid #C5A788;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.nav-reserve-button:hover {
+    background: transparent;
+    color: #F5EFE6;
+}
+
+/* HOMEPAGE HERO */
+.home-hero {
+    position: relative;
+    min-height: 570px;
+    overflow: hidden;
+    background-color: #E9D9C8;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 68%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        #E9D9C8 0%,
+        rgba(233, 217, 200, 0.75) 15%,
+        rgba(233, 217, 200, 0.05) 65%
+    );
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 55%;
+    padding: 65px 0 25px 5%;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-eyebrow {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #765B45;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 0.98;
+    font-weight: 500;
+    color: #241913;
+    margin: 20px 0;
+}
+
+.hero-text h1 span {
+    color: #A87955;
+}
+
+.hero-text > p {
+    max-width: 370px;
+    color: #655044;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* HERO BUTTONS */
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.hero-primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #C5A788;
+    color: #24150F;
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 30px;
+    font-size: 11px;
+    transition: 0.3s;
+}
+
+.hero-primary-button:hover {
+    background-color: #76513A;
+    color: white;
+}
+
+.hero-secondary-button {
+    color: #382B22;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.hero-secondary-button:hover {
+    color: #A87955;
+}
+
+/* HERO STATISTICS */
+.hero-statistics {
+    display: flex;
+    gap: 35px;
+    margin-top: 38px;
+    border-left: 1px solid #A87955;
+    padding-left: 18px;
+}
+
+.hero-statistics h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    margin: 0;
+    color: #241913;
+}
+
+.hero-statistics p {
+    color: #765B45;
+    font-size: 10px;
+    margin: 3px 0 0;
+}
+
+/* SEASONAL FAVOURITES */
+.home-favourites {
+    padding: 40px 6% 35px;
+    background-color: #F5EFE6;
+}
+
+.favourites-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.section-eyebrow {
+    color: #A87955;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.favourites-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #382B22;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.favourites-heading > p {
+    max-width: 300px;
+    color: #8B7765;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.view-menu-button {
+    color: #382B22;
+    text-decoration: none;
+    font-size: 11px;
+    border-bottom: 1px solid #A87955;
+    padding-bottom: 7px;
+}
+
+.view-menu-button:hover {
+    color: #A87955;
+}
+
+.favourites-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.favourite-card {
+    background: transparent;
+    overflow: hidden;
+}
+
+.favourite-card img {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.favourite-card:hover img {
+    transform: translateY(-5px);
+}
+
+.favourite-info {
+    padding: 12px 2px 8px;
+}
+
+.favourite-info span {
+    color: #A18468;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.favourite-info h3 {
+    color: #382B22;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+
+/* OUR STORY */
+.home-story {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr 0.85fr;
+    min-height: 320px;
+}
+
+.story-text {
+    background-color: #24150F;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.story-text h2 {
+    font-family: Georgia, serif;
+    color: #F5EFE6;
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 12px 0;
+}
+
+.story-text p {
+    color: #D8C4AE;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 280px;
+}
+
+.story-button {
+    color: #F5EFE6;
+    text-decoration: none;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+.story-button:hover {
+    color: #D6B99D;
+}
+
+.story-image {
+    height: 320px;
+    overflow: hidden;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    display: block;
+}
+
+.story-quote {
+    background-color: #DCC3AA;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.story-quote span {
+    color: #765B45;
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.story-quote p {
+    font-family: Georgia, serif;
+    color: #382B22;
+    font-size: 35px;
+    line-height: 1.25;
+    margin-top: 18px;
+}
+
+/* FEATURES */
+.home-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 35px 5%;
+    background-color: #F5EFE6;
+    border-top: 1px solid #E5D5C3;
+    border-bottom: 1px solid #E5D5C3;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-item > span {
+    font-size: 28px;
+    color: #A87955;
+}
+
+.feature-item h4 {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    color: #382B22;
+    margin: 0 0 5px;
+}
+
+.feature-item p {
+    color: #9B8068;
+    font-size: 10px;
+    margin: 0;
+}
+
+/* HOMEPAGE FOOTER */
+.home-footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 30px;
+    padding: 30px 5% 55px;
+    background-color: #24150F;
+    color: #F5EFE6;
+}
+
+.footer-brand h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+.footer-brand span {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 3px;
+    margin-top: 8px;
+}
+
+.footer-description h4 {
+    font-family: Georgia, serif;
+    font-size: 21px;
+}
+
+.footer-description p {
+    color: #D6B99D;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-content: start;
+}
+
+.footer-links a {
+    color: #E5D5C3;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.footer-links a:hover {
+    color: #D6B99D;
+}
+
+.footer-bottom {
+    position: absolute;
+    bottom: 12px;
+    left: 5%;
+    color: #B99A7B;
+    font-size: 10px;
+}
+
+/* =========================================
+   11. EDITORIAL DASHBOARD
+========================================= */
+
+.savora-dashboard {
+    background-color: #F5EFE6;
+    color: #38251B;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.savora-dashboard .dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* DASHBOARD SIDEBAR */
+.savora-dashboard .sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #24150F;
+    padding: 35px 24px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.savora-dashboard .sidebar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #F5EFE6;
+    margin-bottom: 35px;
+}
+
+.savora-dashboard .sidebar-brand span {
+    color: #C5A788;
+}
+
+.savora-dashboard .sidebar-label,
+.savora-dashboard .section-eyebrow,
+.savora-dashboard .dashboard-date {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #B99A7B;
+}
+
+.savora-dashboard .sidebar-image {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(245, 239, 230, 0.15);
+}
+
+.savora-dashboard .sidebar-image img {
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 13px;
+}
+
+.savora-dashboard .sidebar-image p {
+    color: #F5EFE6;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.savora-dashboard .sidebar-image small {
+    color: #B99A7B;
+    font-size: 11px;
+}
+
+.savora-dashboard .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.savora-dashboard .sidebar-menu a,
+.savora-dashboard .sidebar-logout {
+    color: #DCC3AA;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 12px 14px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.savora-dashboard .sidebar-menu a:hover,
+.savora-dashboard .sidebar-menu a.active {
+    background-color: #38251B;
+    color: #FFFFFF;
+}
+
+.savora-dashboard .sidebar-bottom {
+    margin-top: auto;
+    padding-top: 35px;
+}
+
+.savora-dashboard .sidebar-logout {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.savora-dashboard .sidebar-bottom small {
+    color: #8D7664;
+    font-size: 10px;
+}
+
+/* DASHBOARD MAIN */
+.savora-dashboard .dashboard-main {
+    flex: 1;
+    min-width: 0;
+    padding: 35px 45px;
+}
+
+/* DASHBOARD HEADER */
+.savora-dashboard .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFCF7;
+    border: 2px solid #765039;
+    padding: 18px 25px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+}
+
+.savora-dashboard .dashboard-header h4 {
+    font-family: 'Playfair Display', serif;
+    color: #24150F;
+    font-size: 22px;
+    margin: 7px 0 2px;
+}
+
+.savora-dashboard .dashboard-header p {
+    color: #927A66;
+    font-size: 12px;
+    margin: 0;
+}
+
+.savora-dashboard .user-profile {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: #38251B;
+    color: #F5EFE6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* DASHBOARD INTRO */
+.savora-dashboard .dashboard-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.savora-dashboard .dashboard-intro h1 {
+    font-family: 'Playfair Display', serif;
+    color: #24150F;
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.15;
+    margin: 12px 0;
+}
+
+.savora-dashboard .intro-description {
+    color: #806A58;
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 430px;
+    margin: 0;
+}
+
+.savora-dashboard .dashboard-cta {
+    background-color: #38251B;
+    color: #F5EFE6;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.savora-dashboard .dashboard-cta:hover {
+    background-color: #765039;
+    color: white;
+}
+
+/* DASHBOARD STATS */
+.savora-dashboard .dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.savora-dashboard .stat-card {
+    background-color: #38251B;
+    border: 2px solid #765039;
+    padding: 24px;
+    border-radius: 7px;
+}
+
+.savora-dashboard .stat-label {
+    color: #C5A788;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.savora-dashboard .stat-card h2 {
+    font-family: 'Playfair Display', serif;
+    color: #F5EFE6;
+    font-size: 38px;
+    margin: 12px 0 4px;
+}
+
+.savora-dashboard .stat-card p {
+    color: #DCC3AA;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* DASHBOARD CHART */
+.savora-dashboard .chart-section {
+    margin-bottom: 35px;
+    padding: 27px;
+    background-color: #38251B;
+    border: 2px solid #765039;
+    border-radius: 7px;
+}
+
+.savora-dashboard .section-heading h3,
+.savora-dashboard .recent-heading h3 {
+    font-family: 'Playfair Display', serif;
+    color: #F5EFE6;
+    font-size: 27px;
+    margin: 8px 0;
+}
+
+.savora-dashboard .section-heading > div > p:last-child,
+.savora-dashboard .recent-heading > div > p:last-child {
+    color: #DCC3AA;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.savora-dashboard .chart-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+}
+
+/* DASHBOARD RECENT RECIPES */
+.savora-dashboard .recent-section {
+    margin-top: 30px;
+}
+
+.savora-dashboard .recent-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.savora-dashboard .view-all-link {
+    color: #765039;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.savora-dashboard .view-all-link:hover {
+    color: #24150F;
+}
+
+.savora-dashboard .recipe-card {
+    background-color: #FFFCF7;
+    border: 1px solid #E5D5C3;
+    border-radius: 7px;
+    overflow: hidden;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.savora-dashboard .recipe-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(36, 21, 15, 0.08);
+}
+
+.savora-dashboard .recipe-card img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.savora-dashboard .recipe-info {
+    padding: 16px;
+}
+
+.savora-dashboard .recipe-info h5 {
+    font-family: 'Playfair Display', serif;
+    color: #38251B;
+    font-size: 18px;
+}
+
+.savora-dashboard .recipe-info p {
+    color: #9B8068;
+    font-size: 11px;
+    margin: 0;
+}
+
+/* DASHBOARD FOOTER */
+.savora-dashboard .dashboard-footer {
+    border-top: 1px solid #E5D5C3;
+    margin-top: 35px;
+    padding-top: 18px;
+}
+
+.savora-dashboard .dashboard-footer p {
+    color: #9B8068;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* =========================================
+   12. ALL RECIPES PAGE
+========================================= */
+
+.savora-recipes {
+    background-color: #F5EFE6;
+    color: #38251B;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.savora-recipes .dashboard-main {
+    flex: 1;
+    min-width: 0;
+    padding: 35px 45px;
+}
+
+/* ALL RECIPES SIDEBAR */
+.savora-recipes .sidebar {
+    background-color: #24150F;
+}
+
+.savora-recipes .sidebar-brand {
+    color: #F5EFE6;
+    font-family: 'Playfair Display', serif;
+}
+
+.savora-recipes .sidebar-menu a,
+.savora-recipes .sidebar-logout {
+    color: #DCC3AA;
+}
+
+.savora-recipes .sidebar-menu a:hover,
+.savora-recipes .sidebar-menu a.active {
+    background-color: #38251B;
+    color: #FFFFFF;
+}
+
+/* ALL RECIPES HEADER */
+.savora-recipes .dashboard-header {
+    background-color: #FFFCF7;
+    border: 3px solid #765039;
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin-bottom: 40px;
+}
+
+.savora-recipes .dashboard-header h4 {
+    font-family: 'Playfair Display', serif;
+    color: #24150F;
+    font-size: 24px;
+}
+
+.savora-recipes .dashboard-header p {
+    color: #927A66;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/* PAGE TITLE */
+.savora-recipes .dashboard-main h1 {
+    font-family: 'Playfair Display', serif;
+    color: #24150F;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.savora-recipes .dashboard-main > .d-flex > div > p {
+    color: #927A66;
+    font-size: 13px;
+}
+
+/* ADD RECIPE BUTTON */
+.savora-recipes .login-button {
+    background-color: #38251B;
+    color: #F5EFE6;
+    border: 2px solid #38251B;
+    padding: 12px 22px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.savora-recipes .login-button:hover {
+    background-color: #765039;
+    border-color: #765039;
+    color: white;
+}
+
+/* ALL RECIPES CARDS - NO BORDER */
+.savora-recipes .recipe-card {
+    position: relative;
+    background-color: #FFFCF7;
+    border: none;
+    border-radius: 8px;
+    overflow: visible;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.savora-recipes .recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(36, 21, 15, 0.10);
+}
+
+.savora-recipes .recipe-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.savora-recipes .recipe-info {
+    padding: 18px;
+}
+
+.savora-recipes .recipe-info h5 {
+    font-family: 'Playfair Display', serif;
+    color: #38251B;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.savora-recipes .recipe-info p {
+    color: #927A66;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+/* =========================================
+   13. PREMIUM RECIPE TOOLBAR
+========================================= */
+
+.savora-recipes .recipe-toolbar {
+    margin: 30px 0 35px;
+}
+
+/* SEARCH BAR */
+.savora-recipes .recipe-search {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.savora-recipes .search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: #765039;
+    pointer-events: none;
+}
+
+.savora-recipes .recipe-search input {
+    width: 100%;
+    height: 58px;
+    padding: 12px 20px 12px 52px;
+    background: #FFFCF7;
+    border: 1px solid #DCC3AA;
+    border-radius: 5px;
+    color: #38251B;
+    font-size: 14px;
+}
+
+/* FILTER AND SORT */
+.savora-recipes .recipe-toolbar-bottom {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.savora-recipes .recipe-filter,
+.savora-recipes .recipe-sort {
+    width: 210px;
+    margin-bottom: 0;
+}
+
+.savora-recipes .recipe-filter select,
+.savora-recipes .recipe-sort select {
+    width: 100%;
+    height: 48px;
+    background-color: #FFFCF7;
+    border: 1px solid #DCC3AA;
+    border-radius: 5px;
+    color: #38251B;
+    font-size: 13px;
+}
+
+.savora-recipes .recipe-counter {
+    margin: 0 0 0 auto;
+    color: #765039;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+}
+
+/* INPUT FOCUS */
+.savora-recipes .recipe-search input:focus,
+.savora-recipes .recipe-filter select:focus,
+.savora-recipes .recipe-sort select:focus {
+    border-color: #765039;
+    box-shadow: 0 0 0 3px rgba(118, 80, 57, 0.10);
+    outline: none;
+}
+
+/* =========================================
+   14. DELETE MENU FIX
+========================================= */
+
+/* Keep menu visible outside the recipe card */
+.savora-recipes .recipe-card {
+    overflow: visible;
+}
+
+/* Put active menu above nearby cards */
+.savora-recipes .recipe-card:has(.recipe-menu[open]) {
+    position: relative;
+    z-index: 100;
+}
+
+.savora-recipes .recipe-menu {
+    position: relative;
+    margin-left: auto;
+    flex-shrink: 0;
+    z-index: 101;
+}
+
+.savora-recipes .recipe-menu summary {
+    list-style: none;
+    cursor: pointer;
+    color: #765039;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.savora-recipes .recipe-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.savora-recipes .recipe-menu-options {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 150px;
+    background-color: #FFFCF7;
+    border: 1px solid #DCC3AA;
+    border-radius: 6px;
+    padding: 6px;
+    z-index: 999;
+    box-shadow: 0 8px 20px rgba(36, 21, 15, 0.15);
+}
+
+.savora-recipes .recipe-menu-options button {
+    display: block;
+    width: 100%;
+    min-height: 38px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #8B2929;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.savora-recipes .recipe-menu-options button:hover {
+    background-color: #F5EFE6;
+}
+
+/* =========================================
+   15. ADD RECIPE MODAL
+========================================= */
+
+.savora-recipes .modal-content {
+    background-color: #F5EFE6;
+    border: 2px solid #765039;
+    border-radius: 10px;
+}
+
+.savora-recipes .modal-title {
+    font-family: 'Playfair Display', serif;
+    color: #24150F;
+}
+
+.savora-recipes .form-control,
+.savora-recipes .form-select {
+    border: 1px solid #B99A7B;
+    background-color: #FFFCF7;
+}
+
+.savora-recipes .form-control:focus,
+.savora-recipes .form-select:focus {
+    border-color: #765039;
+    box-shadow: 0 0 0 0.2rem rgba(118, 80, 57, 0.15);
+}
+
+/* =========================================
+   16. RESPONSIVE STYLES
+========================================= */
+
+@media (max-width: 992px) {
+    .favourites-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-story {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .story-image {
+        height: 320px;
+    }
+
+    .story-quote {
+        grid-column: span 2;
+        min-height: 250px;
+    }
+
+    .home-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .dashboard-main {
+        padding: 25px 15px;
+    }
+
+    /* DASHBOARD RESPONSIVE */
+    .savora-dashboard .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .savora-dashboard .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .savora-dashboard .dashboard-main {
+        padding: 25px 18px;
+    }
+
+    .savora-dashboard .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .savora-dashboard .dashboard-intro {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .savora-dashboard .recent-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* ALL RECIPES RESPONSIVE */
+    .savora-recipes .dashboard-main {
+        padding: 25px 18px;
+    }
+
+    .savora-recipes .recipe-toolbar-bottom {
+        flex-wrap: wrap;
+    }
+
+    .savora-recipes .recipe-filter,
+    .savora-recipes .recipe-sort {
+        flex: 1 1 180px;
+        width: auto;
+    }
+
+    .savora-recipes .recipe-counter {
+        width: 100%;
+        margin: 5px 0 0;
+    }
+
+    /* HOMEPAGE NAVBAR */
+    .home-navbar {
+        flex-wrap: wrap;
+        padding: 18px 5%;
+        gap: 18px;
+    }
+
+    .home-logo {
+        font-size: 27px;
+    }
+
+    .home-nav-links {
+        width: 100%;
+        order: 3;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .home-nav-links a {
+        font-size: 11px;
+    }
+
+    .home-nav-actions {
+        margin-left: auto;
+        gap: 10px;
+    }
+
+    .nav-reserve-button {
+        padding: 10px 14px;
+        font-size: 10px;
+    }
+
+    /* HOMEPAGE HERO */
+    .home-hero {
+        display: flex;
+        flex-direction: column;
+        padding: 45px 6%;
+        gap: 30px;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+        line-height: 1.15;
+    }
+
+    .hero-text > p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 280px;
+        opacity: 0.35;
+    }
+
+    .hero-image::after {
+        background: rgba(233, 217, 200, 0.35);
+    }
+
+    .hero-statistics {
+        gap: 20px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-favourites {
+        padding: 40px 6% 35px;
+    }
+
+    .favourites-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .favourites-heading h2 {
+        font-size: 34px;
+    }
+
+    .favourites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .favourite-card img {
+        height: 250px;
+    }
+
+    .home-story {
+        grid-template-columns: 1fr;
+    }
+
+    .story-image {
+        height: 280px;
+    }
+
+    .story-quote {
+        grid-column: auto;
+    }
+
+    .home-features {
+        grid-template-columns: 1fr;
+        padding: 40px 8%;
+    }
+
+    .home-footer {
+        grid-template-columns: 1fr;
+        padding-bottom: 65px;
+    }
+}
+
+/* FORCE DASHBOARD CHART TO CREAM */
+.savora-dashboard .chart-section {
+    background: #FFFCF7 !important;
+    background-color: #FFFCF7 !important;
+    border: 2px solid #765039 !important;
+}
+
+.savora-dashboard .chart-section h3 {
+    color: #24150F !important;
+}
+
+.savora-dashboard .chart-section p {
+    color: #927A66 !important;
+}
+
+.savora-dashboard .chart-container {
+    background: #FFFCF7 !important;
+    background-color: #FFFCF7 !important;
+}
+
+/* DASHBOARD - CREAM STATISTICS & CHART */
+
+.savora-dashboard .stat-card,
+.savora-dashboard .chart-section {
+    background-color: #FFFCF7 !important;
+    border: 2px solid #765039 !important;
+}
+
+/* STATISTICS TEXT */
+.savora-dashboard .stat-label {
+    color: #765039 !important;
+}
+
+.savora-dashboard .stat-card h2 {
+    color: #24150F !important;
+}
+
+.savora-dashboard .stat-card p {
+    color: #927A66 !important;
+}
+
+/* CHART TEXT */
+.savora-dashboard .section-heading h3 {
+    color: #24150F !important;
+}
+
+.savora-dashboard .section-heading p {
+    color: #927A66 !important;
+}
+
+
+/* =========================================
+   SAVORA - PREMIUM RECIPE POPUPS
+========================================= */
+
+/* CATEGORY BUTTON */
+.savora-categories .category-item {
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    padding: 0;
+}
+
+.savora-categories .category-item:focus-visible {
+    outline: 2px solid #765039;
+    outline-offset: 5px;
+}
+
+/* CATEGORY IMAGE */
+.savora-categories .category-image {
+    height: 175px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.savora-categories .category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.savora-categories .category-item:hover .category-image img {
+    transform: scale(1.04);
+}
+
+/* POPUP DESIGN */
+.savora-categories .savora-modal {
+    background: #F5EFE6;
+    border: 1px solid #C5A788;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.savora-categories .savora-modal .modal-header {
+    padding: 25px 30px;
+    border-bottom: 1px solid #DCC3AA;
+    background: #F5EFE6;
+}
+
+.savora-categories .savora-modal .modal-title {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #24150F;
+    margin-top: 5px;
+}
+
+.savora-categories .savora-modal .modal-header p {
+    color: #765039;
+    margin: 5px 0 0;
+    font-size: 13px;
+}
+
+.savora-categories .savora-modal .modal-body {
+    padding: 25px 30px;
+}
+
+/* RECIPE SELECTION GRID */
+.savora-categories .recipe-popup-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* RECIPE CARDS */
+.savora-categories .recipe-popup-card {
+    border: none;
+    background: #FFFCF7;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 7px;
+    transition: transform 0.3s ease;
+}
+
+.savora-categories .recipe-popup-card:hover {
+    transform: translateY(-4px);
+}
+
+.savora-categories .recipe-popup-image {
+    height: 155px;
+    overflow: hidden;
+}
+
+.savora-categories .recipe-popup-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.savora-categories .recipe-popup-card:hover img {
+    transform: scale(1.05);
+}
+
+.savora-categories .recipe-popup-info {
+    padding: 14px;
+}
+
+.savora-categories .recipe-popup-info span {
+    color: #A87955;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.savora-categories .recipe-popup-info h5 {
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    color: #24150F;
+    margin: 7px 0;
+}
+
+.savora-categories .recipe-popup-info p {
+    color: #927A66;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* RECIPE DETAILS IMAGE */
+.savora-categories .recipe-detail-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 18px;
+}
+
+.savora-categories .recipe-detail-description {
+    color: #765039;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.savora-categories .recipe-detail-meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 12px 0;
+    margin-bottom: 20px;
+    border-top: 1px solid #DCC3AA;
+    border-bottom: 1px solid #DCC3AA;
+    color: #765039;
+    font-size: 13px;
+}
+
+/* INGREDIENTS & INSTRUCTIONS */
+.savora-categories .recipe-detail-section {
+    margin-bottom: 25px;
+}
+
+.savora-categories .recipe-detail-section h4 {
+    font-family: "Playfair Display", serif;
+    color: #24150F;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.savora-categories .recipe-detail-section ul,
+.savora-categories .recipe-detail-section ol {
+    padding-left: 22px;
+    color: #583D2E;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+.savora-categories .recipe-detail-section li {
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+/* SMALL CLOSE BUTTON - BOTTOM LEFT */
+.savora-categories .recipe-close-btn {
+    background: #38251B;
+    color: #F5EFE6;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease;
+}
+
+.savora-categories .recipe-close-btn:hover {
+    background: #765039;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .savora-categories .recipe-popup-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .savora-categories .recipe-popup-image {
+        height: 125px;
+    }
+
+    .savora-categories .savora-modal .modal-header,
+    .savora-categories .savora-modal .modal-body {
+        padding: 18px;
+    }
+
+    .savora-categories .recipe-detail-image {
+        height: 200px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .savora-categories .recipe-popup-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .savora-categories .recipe-popup-info h5 {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   SAVORA - CATEGORIES PAGE REFINEMENT
+========================================= */
+
+/* Header with brown border */
+.savora-categories .category-page-header {
+    border: 2px solid #765039;
+    border-radius: 12px;
+    padding: 18px 24px;
+    margin-bottom: 22px;
+    background-color: #FFFCF7;
+}
+
+/* Compact category introduction */
+.savora-categories .category-intro {
+    margin-top: 10px;
+    margin-bottom: 22px;
+    align-items: center;
+}
+
+.savora-categories .category-intro h1 {
+    font-size: 32px;
+    margin: 0;
+    color: #24150F;
+}
+
+.savora-categories .category-total h2 {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.savora-categories .category-total p {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+/* Category grid */
+.savora-categories .category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 0;
+}
+
+/* Category card */
+.savora-categories .category-item {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Full image */
+.savora-categories .category-image {
+    width: 100%;
+    height: 235px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #E5D5C3;
+}
+
+.savora-categories .category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.savora-categories .category-item:hover .category-image img {
+    transform: scale(1.04);
+}
+
+/* Category name only */
+.savora-categories .category-details {
+    padding: 12px 2px 5px;
+}
+
+.savora-categories .category-details h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: #24150F;
+    margin: 0;
+}
+
+/* Hover effect */
+.savora-categories .category-item:hover .category-details h4 {
+    color: #765039;
+}
+
+/* Footer spacing */
+.savora-categories .categories-footer {
+    margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .savora-categories .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .savora-categories .category-intro h1 {
+        font-size: 26px;
+    }
+
+    .savora-categories .category-image {
+        height: 180px;
+    }
+
+    .savora-categories .category-details h4 {
+        font-size: 16px;
+    }
+
+    .savora-categories .category-grid {
+        gap: 18px 14px;
+    }
+}
+
+/* =========================================
+   CATEGORIES PAGE - FINAL REFINEMENT
+========================================= */
+
+/* Dark chocolate border */
+.savora-categories .category-page-header {
+    border: 2px solid #24150F !important;
+}
+
+/* Sidebar copyright at the bottom */
+.savora-categories .sidebar {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.savora-categories .sidebar-bottom {
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+/* Category images fill the image area */
+.savora-categories .category-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #E5D5C3;
+}
+
+.savora-categories .category-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Category image hover */
+.savora-categories .category-item:hover .category-image img {
+    transform: scale(1.04);
+}
+
+@media (max-width: 576px) {
+    .savora-categories .category-image {
+        height: 180px;
+    }
+}
+
+/* CATEGORIES - SMALL LOGOUT */
+.savora-categories .sidebar-bottom {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.savora-categories .logout-link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 12px;
+    color: #765039;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.savora-categories .logout-link i {
+    font-size: 14px;
+}
+
+.savora-categories .logout-link:hover {
+    color: #24150F;
+}
+
+/* CATEGORIES - SMALL LOGOUT */
+.savora-categories .sidebar {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.savora-categories .sidebar-bottom {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.savora-categories .logout-link {
+    display: block;
+    font-size: 11px;
+    color: #765039;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+.savora-categories .logout-link:hover {
+    color: #24150F;
+}
+
+/* =========================================
+   CATEGORIES SIDEBAR - MATCH DASHBOARD
+========================================= */
+
+.savora-categories .sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #24150F !important;
+    padding: 35px 24px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+/* Sidebar logo */
+.savora-categories .sidebar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #F5EFE6;
+    margin-bottom: 35px;
+}
+
+/* Sidebar image */
+.savora-categories .sidebar-image {
+    background-color: transparent;
+    padding: 0 0 25px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid rgba(245, 239, 230, 0.15);
+    text-align: left;
+}
+
+/* Sidebar menu */
+.savora-categories .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.savora-categories .sidebar-menu a {
+    color: #DCC3AA;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 12px 14px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.savora-categories .sidebar-menu a:hover,
+.savora-categories .sidebar-menu a.active {
+    background-color: #38251B;
+    color: #FFFFFF;
+}
+
+/* Log Out - same size as Dashboard */
+.savora-categories .sidebar-bottom {
+    margin-top: auto;
+    padding-top: 35px;
+}
+
+.savora-categories .sidebar-logout {
+    display: block;
+    color: #DCC3AA;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 12px 14px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.savora-categories .sidebar-logout:hover {
+    background-color: #38251B;
+    color: #FFFFFF;
+}
+/* CATEGORIES SIDEBAR - SAME AS ALL RECIPES */
+
+.savora-categories .sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #24150F !important;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.savora-categories .sidebar-brand {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #F5EFE6;
+    text-align: left;
+    margin: 12px 0 20px;
+    padding-left: 10px;
+}
+
+.savora-categories .sidebar-brand span {
+    color: #C5A788;
+}
+
+.savora-categories .sidebar-image {
+    background-color: #765B45;
+    padding: 10px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.savora-categories .sidebar-image img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.savora-categories .sidebar-image p {
+    color: #FFFCF7;
+    margin: 10px 0 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.savora-categories .sidebar-image small {
+    color: #E5D5C3;
+    font-size: 11px;
+}
+
+.savora-categories .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.savora-categories .sidebar-menu a {
+    text-decoration: none;
+    color: #DCC3AA;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.savora-categories .sidebar-menu a:hover,
+.savora-categories .sidebar-menu a.active {
+    background-color: #38251B;
+    color: #FFFFFF;
+}
+
+.savora-categories .sidebar-bottom {
+    margin-top: auto;
+    padding-top: 35px;
+}
+
+.savora-categories .sidebar-logout {
+    display: block;
+    color: #DCC3AA;
+    text-decoration: none;
+    padding: 12px 15px;
+    font-size: 14px;
+}
+
+.savora-categories .sidebar-logout:hover {
+    background-color: #38251B;
+    color: #FFFFFF;
+}
+
+/* =========================================
+   SAVORA - SAME SIDEBAR FOR ALL APP PAGES
+========================================= */
+
+/* Sidebar background and layout */
+.savora-dashboard .sidebar,
+.savora-recipes .sidebar,
+.savora-categories .sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #24150F !important;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+/* Savora logo */
+.savora-dashboard .sidebar-brand,
+.savora-recipes .sidebar-brand,
+.savora-categories .sidebar-brand {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #F5EFE6;
+    text-align: left;
+    margin: 12px 0 20px;
+    padding-left: 10px;
+}
+
+.savora-dashboard .sidebar-brand span,
+.savora-recipes .sidebar-brand span,
+.savora-categories .sidebar-brand span {
+    color: #C5A788;
+}
+
+/* Sidebar image */
+.savora-dashboard .sidebar-image,
+.savora-recipes .sidebar-image,
+.savora-categories .sidebar-image {
+    background-color: #765B45;
+    padding: 10px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.savora-dashboard .sidebar-image img,
+.savora-recipes .sidebar-image img,
+.savora-categories .sidebar-image img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.savora-dashboard .sidebar-image p,
+.savora-recipes .sidebar-image p,
+.savora-categories .sidebar-image p {
+    color: #FFFCF7;
+    margin: 10px 0 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.savora-dashboard .sidebar-image small,
+.savora-recipes .sidebar-image small,
+.savora-categories .sidebar-image small {
+    color: #E5D5C3;
+    font-size: 11px;
+}
+
+/* Sidebar menu */
+.savora-dashboard .sidebar-menu,
+.savora-recipes .sidebar-menu,
+.savora-categories .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.savora-dashboard .sidebar-menu a,
+.savora-recipes .sidebar-menu a,
+.savora-categories .sidebar-menu a {
+    text-decoration: none;
+    color: #DCC3AA;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.savora-dashboard .sidebar-menu a:hover,
+.savora-dashboard .sidebar-menu a.active,
+.savora-recipes .sidebar-menu a:hover,
+.savora-recipes .sidebar-menu a.active,
+.savora-categories .sidebar-menu a:hover,
+.savora-categories .sidebar-menu a.active {
+    background-color: #38251B;
+    color: #FFFFFF;
+}
+
+/* SIDEBAR COPYRIGHT */
+
+.savora-dashboard .sidebar-bottom,
+.savora-recipes .sidebar-bottom,
+.savora-categories .sidebar-bottom,
+.savora-favourites .sidebar-bottom,
+.savora-reports .sidebar-bottom {
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+.savora-dashboard .sidebar-bottom small,
+.savora-recipes .sidebar-bottom small,
+.savora-categories .sidebar-bottom small,
+.savora-favourites .sidebar-bottom small,
+.savora-reports .sidebar-bottom small {
+    display: block;
+    color: #B99A7B;
+    font-size: 11px;
+    text-align: left;
+    padding-left: 15px;
+    margin-top: 15px;
+}
+
+/* FIX SAVORA LOGO - ALL RECIPES */
+.savora-recipes .sidebar-brand {
+    font-family: Georgia, serif !important;
+    font-size: 42px !important;
+    font-weight: 700 !important;
+    color: #F5EFE6 !important;
+    text-align: left !important;
+    margin: 12px 0 20px !important;
+    padding-left: 10px !important;
+}
+
+.savora-recipes .sidebar-brand span {
+    color: #C5A788 !important;
+}
+
+
+/* =========================================
+   SAVORA - TYPOGRAPHY MATCH DASHBOARD
+   ALL RECIPES & CATEGORIES
+========================================= */
+
+/* Main font */
+.savora-recipes,
+.savora-categories {
+    font-family: 'DM Sans', sans-serif;
+    color: #24150F;
+}
+
+/* Main page title */
+.savora-recipes .dashboard-main h1,
+.savora-categories .dashboard-main h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #24150F;
+    margin-bottom: 10px;
+}
+
+/* Top header eyebrow */
+.savora-recipes .dashboard-date,
+.savora-categories .dashboard-date,
+.savora-recipes .category-eyebrow,
+.savora-categories .category-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #B99A7B;
+}
+
+/* Header title */
+.savora-recipes .dashboard-header h4,
+.savora-categories .dashboard-header h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 600;
+    color: #24150F;
+    margin: 8px 0 4px;
+}
+
+/* Header description */
+.savora-recipes .dashboard-header p,
+.savora-categories .dashboard-header p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #927A66;
+    margin-bottom: 0;
+}
+
+/* Main page description */
+.savora-recipes .dashboard-main > .d-flex > div > p,
+.savora-categories .category-intro p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #927A66;
+}
+
+/* Recipe card title */
+.savora-recipes .recipe-info h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #24150F;
+}
+
+/* Recipe category wording */
+.savora-recipes .recipe-info p,
+.savora-recipes .category-row p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #927A66;
+}
+
+/* Category card title */
+.savora-categories .category-details h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #24150F;
+}
+
+/* Toolbar wording */
+.savora-recipes .recipe-toolbar,
+.savora-recipes .recipe-toolbar input,
+.savora-recipes .recipe-toolbar select {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+}
+
+/* Buttons */
+.savora-recipes button,
+.savora-categories button {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+}
+
+/* =========================================
+   SAVORA - RECIPE FAVOURITE BUTTON
+========================================= */
+
+.savora-recipes .recipe-card {
+    position: relative;
+}
+
+.savora-recipes .recipe-favourite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: #FFFCF7;
+    color: #765039;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(36, 21, 15, 0.15);
+    z-index: 5;
+}
+
+.savora-recipes .recipe-favourite-btn.is-favourite {
+    color: #9B3434;
+}
+
+/* =========================================
+   SAVORA - FAVOURITES PAGE
+========================================= */
+
+.savora-favourites {
+    background: #F5EFE6;
+    color: #24150F;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.savora-favourites .favourite-intro {
+    padding: 30px 0 35px;
+}
+
+.savora-favourites .favourite-intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #24150F;
+    margin-bottom: 14px;
+}
+
+.savora-favourites .favourite-intro > p:not(.section-eyebrow) {
+    color: #927A66;
+    font-size: 14px;
+    max-width: 500px;
+}
+
+.savora-favourites .favourite-browse-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 11px 22px;
+    background: #24150F;
+    color: #F5EFE6;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.savora-favourites .favourite-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0 25px;
+    flex-wrap: wrap;
+}
+
+.savora-favourites .favourite-toolbar h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: #24150F;
+}
+
+.savora-favourites .favourite-toolbar p {
+    font-size: 12px;
+    color: #927A66;
+}
+
+.savora-favourites #searchFavourite {
+    width: 260px;
+    padding: 11px 15px;
+    border: 1px solid #DCC3AA;
+    border-radius: 7px;
+    background: #FFFCF7;
+    outline: none;
+    font-size: 13px;
+}
+
+.savora-favourites .favourite-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.savora-favourites .favourite-card {
+    background: #FFFCF7;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.savora-favourites .favourite-image {
+    height: 210px;
+    position: relative;
+}
+
+.savora-favourites .favourite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.savora-favourites .remove-favourite {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: #FFFCF7;
+    color: #9B3434;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.savora-favourites .favourite-info {
+    padding: 18px;
+}
+
+.savora-favourites .favourite-info p {
+    color: #A87955;
+    font-size: 11px;
+    margin-bottom: 7px;
+}
+
+.savora-favourites .favourite-info h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: #24150F;
+}
+
+.savora-favourites .remove-text {
+    background: none;
+    border: none;
+    color: #927A66;
+    font-size: 12px;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.savora-favourites .favourite-empty {
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.savora-favourites .empty-icon {
+    font-size: 45px;
+    color: #A87955;
+}
+
+.savora-favourites .favourite-empty h3 {
+    font-family: 'Playfair Display', serif;
+    color: #24150F;
+}
+
+.savora-favourites .favourite-empty p {
+    color: #927A66;
+    font-size: 13px;
+}
+
+.savora-favourites .favourite-empty a {
+    display: inline-block;
+    margin-top: 10px;
+    background: #24150F;
+    color: #F5EFE6;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.savora-favourites .favourite-footer {
+    text-align: center;
+    color: #927A66;
+    font-size: 12px;
+    padding: 35px 0 15px;
+}
+
+.savora-favourites .no-search-result {
+    color: #927A66;
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    .savora-favourites .favourite-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .savora-favourites .favourite-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .savora-favourites .favourite-toolbar {
+        align-items: flex-start;
+    }
+
+    .savora-favourites #searchFavourite {
+        width: 100%;
+    }
+}
+
+/* FAVOURITES SIDEBAR - MATCH CATEGORIES */
+
+.savora-favourites .sidebar {
+    background-color: #24150F !important;
+}
+
+.savora-favourites .sidebar-brand {
+    color: #F5EFE6 !important;
+}
+
+.savora-favourites .sidebar-brand span {
+    color: #C5A788 !important;
+}
+
+.savora-favourites .sidebar-image {
+    background-color: #765B45 !important;
+}
+
+.savora-favourites .sidebar-menu a {
+    color: #DCC3AA !important;
+}
+
+.savora-favourites .sidebar-menu a.active,
+.savora-favourites .sidebar-menu a:hover {
+    background-color: #38251B !important;
+    color: #FFFFFF !important;
+}
+
+.savora-favourites .logout-link {
+    color: #DCC3AA !important;
+}
+
+/* =========================================
+   SAVORA FAVOURITES - SIDEBAR MATCH CATEGORIES
+========================================= */
+
+.savora-favourites .sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #24150F !important;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+/* LOGO */
+.savora-favourites .sidebar-brand {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #F5EFE6;
+    text-align: left;
+    margin: 12px 0 20px;
+    padding-left: 10px;
+}
+
+.savora-favourites .sidebar-brand span {
+    color: #C5A788;
+}
+
+/* IMAGE BOX */
+.savora-favourites .sidebar-image {
+    background-color: #765B45 !important;
+    padding: 10px;
+    border: none;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.savora-favourites .sidebar-image img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.savora-favourites .sidebar-image h5 {
+    color: #FFFCF7;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 3px;
+}
+
+.savora-favourites .sidebar-image p {
+    color: #E5D5C3;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* MENU */
+.savora-favourites .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.savora-favourites .sidebar-menu a {
+    display: block;
+    text-decoration: none;
+    color: #DCC3AA;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.savora-favourites .sidebar-menu a:hover,
+.savora-favourites .sidebar-menu a.active {
+    background-color: #38251B;
+    color: #FFFFFF;
+}
+
+/* LOGOUT */
+.savora-favourites .sidebar-bottom {
+    margin-top: auto;
+    padding-top: 35px;
+}
+
+.savora-favourites .logout-link {
+    display: block;
+    color: #DCC3AA;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.savora-favourites .logout-link:hover {
+    background-color: #38251B;
+    color: #FFFFFF;
+}
+
+/* FAVOURITES HEADER - MATCH CATEGORIES */
+
+.savora-favourites .dashboard-header {
+    background-color: #FFFCF7 !important;
+    border: 1px solid #765039 !important;
+    border-radius: 16px !important;
+    padding: 22px 30px !important;
+    margin-bottom: 35px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.savora-favourites .dashboard-date {
+    color: #765039 !important;
+    font-size: 11px !important;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.savora-favourites .dashboard-header h4 {
+    color: #24150F !important;
+    font-family: Georgia, serif !important;
+    font-size: 26px !important;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.savora-favourites .dashboard-header p {
+    color: #927A66 !important;
+    font-size: 13px;
+    margin: 0;
+}
+
+.savora-favourites .user-profile {
+    background-color: #24150F !important;
+    color: #F5EFE6 !important;
+}
+
+/* FAVOURITES HEADER - MATCH CATEGORIES */
+
+.savora-favourites .dashboard-header {
+    background-color: #FFFCF7 !important;
+    border: 1px solid #765039 !important;
+    border-radius: 16px !important;
+    padding: 22px 30px !important;
+    margin-bottom: 35px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.savora-favourites .dashboard-date {
+    color: #765039 !important;
+    font-size: 11px !important;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.savora-favourites .dashboard-header h4 {
+    color: #24150F !important;
+    font-family: Georgia, serif !important;
+    font-size: 26px !important;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.savora-favourites .dashboard-header p {
+    color: #927A66 !important;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+.savora-favourites .user-profile {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 50% !important;
+    background-color: #24150F !important;
+    color: #F5EFE6 !important;
+    border: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================================
+   SAVORA - REPORTS PAGE
+========================================= */
+
+.savora-reports {
+    background-color: #F5EFE6;
+    color: #38251B;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.savora-reports .dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.savora-reports .dashboard-main {
+    flex: 1;
+    min-width: 0;
+    padding: 35px 40px;
+}
+
+/* HEADER */
+
+.savora-reports .dashboard-header {
+    background-color: #FFFCF7;
+    border: 1px solid #765039;
+    border-radius: 16px;
+    padding: 22px 30px;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.savora-reports .dashboard-date {
+    color: #765039;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.savora-reports .dashboard-header h4 {
+    color: #24150F;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin: 8px 0;
+}
+
+.savora-reports .dashboard-header p {
+    color: #927A66;
+    font-size: 13px;
+    margin: 0;
+}
+
+.savora-reports .user-profile {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #24150F;
+    color: #F5EFE6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* INTRO */
+
+.savora-reports .reports-intro {
+    margin-bottom: 28px;
+}
+
+.savora-reports .reports-eyebrow {
+    color: #A87955;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.savora-reports .reports-intro h1 {
+    color: #24150F;
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.savora-reports .reports-intro p {
+    color: #927A66;
+    font-size: 14px;
+}
+
+/* STATISTICS */
+
+.savora-reports .reports-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.savora-reports .report-stat-card {
+    background-color: #FFFCF7;
+    border: 1.5px solid #765039;
+    border-radius: 15px;
+    padding: 23px 20px;
+    transition: 0.3s;
+}
+
+.savora-reports .report-stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.savora-reports .report-stat-card span {
+    color: #765039;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.savora-reports .report-stat-card h2 {
+    color: #24150F;
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    margin: 12px 0 5px;
+}
+
+.savora-reports .report-stat-card p {
+    color: #927A66;
+    font-size: 11px;
+    margin: 0;
+}
+
+/* CHARTS */
+
+.savora-reports .reports-chart-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 22px;
+    margin-bottom: 28px;
+}
+
+.savora-reports .report-chart-card,
+.savora-reports .report-list-card {
+    background-color: #FFFCF7;
+    border: 1.5px solid #765039;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.savora-reports .report-section-heading {
+    margin-bottom: 22px;
+}
+
+.savora-reports .report-section-heading span {
+    color: #A87955;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.savora-reports .report-section-heading h3 {
+    color: #24150F;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-top: 7px;
+}
+
+.savora-reports .report-chart-container {
+    position: relative;
+    height: 280px;
+    width: 100%;
+}
+
+.savora-reports .pie-container {
+    height: 280px;
+}
+
+/* TABLE */
+
+.savora-reports .report-list-card {
+    margin-bottom: 28px;
+}
+
+.savora-reports .report-table {
+    margin-bottom: 0;
+}
+
+.savora-reports .report-table thead th {
+    background-color: #F5EFE6;
+    color: #765039;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 15px;
+    border-bottom: 1px solid #DCC3AA;
+}
+
+.savora-reports .report-table tbody td {
+    color: #38251B;
+    font-size: 13px;
+    padding: 15px;
+    vertical-align: middle;
+    border-color: #E5D5C3;
+}
+
+.savora-reports .report-status {
+    color: #765039 !important;
+    font-weight: 600;
+}
+
+/* FAVOURITE SUMMARY */
+
+..savora-reports .report-favourite-card {
+    background-color: #24150F;
+    color: #F5EFE6;
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.savora-reports .report-favourite-card span {
+    color: #C5A788;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.savora-reports .report-favourite-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.savora-reports .report-favourite-card p {
+    color: #DCC3AA;
+    font-size: 13px;
+    margin: 0;
+}
+
+.savora-reports .report-favourite-number {
+    text-align: center;
+    min-width: 130px;
+}
+
+.savora-reports .report-favourite-number h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #C5A788;
+}
+
+.savora-reports .report-favourite-number p {
+    font-size: 11px;
+}
+
+/* FOOTER */
+
+.savora-reports .reports-footer {
+    text-align: left;
+    color: #927A66;
+    font-size: 12px;
+    padding: 15px 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .savora-reports .reports-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .savora-reports .reports-chart-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .savora-reports .dashboard-main {
+        padding: 20px;
+    }
+
+    .savora-reports .reports-intro h1 {
+        font-size: 30px;
+    }
+
+    .savora-reports .report-favourite-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .savora-reports .reports-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .savora-reports .report-stat-card {
+        padding: 15px;
+    }
+
+    .savora-reports .report-stat-card h2 {
+        font-size: 27px;
+    }
+
+    .savora-reports .report-chart-card,
+    .savora-reports .report-list-card {
+        padding: 16px;
+    }
+}
+.savora-reports .sidebar-logout,
+.savora-favourites .sidebar-logout,
+.savora-categories .sidebar-logout {
+    display: block;
+    color: #DCC3AA;
+    text-decoration: none;
+    padding: 12px 15px;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.savora-reports .sidebar-logout:hover,
+.savora-favourites .sidebar-logout:hover,
+.savora-categories .sidebar-logout:hover {
+    background-color: #38251B;
+    color: #FFFFFF;
+}
+.savora-reports .sidebar {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.savora-reports .sidebar-bottom {
+    margin-top: auto !important;
+    padding-top: 30px;
+}
+
+.savora-reports .sidebar-logout {
+    display: block;
+    padding: 12px 15px;
+}
+
+
+
+
+/* =========================================
+   SAVORA - MOBILE PORTRAIT HEADER
+   Dashboard, Recipes, Categories, Favourites
+========================================= */
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+
+    /* MAIN LAYOUT */
+    body.savora-dashboard .dashboard-layout,
+    body.savora-recipes .dashboard-layout,
+    body.savora-categories .dashboard-layout,
+    body.savora-favourites .dashboard-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        min-height: 100vh !important;
+    }
+
+    /* FULL WIDTH CHOCOLATE HEADER */
+    body.savora-dashboard .sidebar,
+    body.savora-recipes .sidebar,
+    body.savora-categories .sidebar,
+    body.savora-favourites .sidebar {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        min-height: auto !important;
+        height: auto !important;
+        box-sizing: border-box !important;
+
+        background-color: #24150F !important;
+
+        padding: 15px 16px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 10px !important;
+    }
+
+    /* SAVORA LOGO */
+    body.savora-dashboard .sidebar-brand,
+    body.savora-recipes .sidebar-brand,
+    body.savora-categories .sidebar-brand,
+    body.savora-favourites .sidebar-brand {
+        font-size: 30px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        color: #F5EFE6 !important;
+    }
+
+    /* HIDE SIDEBAR IMAGE */
+    body.savora-dashboard .sidebar-image,
+    body.savora-recipes .sidebar-image,
+    body.savora-categories .sidebar-image,
+    body.savora-favourites .sidebar-image {
+        display: none !important;
+    }
+
+    /* HORIZONTAL NAVIGATION */
+    body.savora-dashboard .sidebar-menu,
+    body.savora-recipes .sidebar-menu,
+    body.savora-categories .sidebar-menu,
+    body.savora-favourites .sidebar-menu {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 5px !important;
+        width: 100% !important;
+    }
+
+    body.savora-dashboard .sidebar-menu a,
+    body.savora-recipes .sidebar-menu a,
+    body.savora-categories .sidebar-menu a,
+    body.savora-favourites .sidebar-menu a {
+        font-size: 11px !important;
+        padding: 8px 10px !important;
+        white-space: nowrap !important;
+    }
+
+    /* LOGOUT AREA */
+    body.savora-dashboard .sidebar-bottom,
+    body.savora-recipes .sidebar-bottom,
+    body.savora-categories .sidebar-bottom,
+    body.savora-favourites .sidebar-bottom {
+        width: 100% !important;
+        margin-top: 5px !important;
+        position: static !important;
+    }
+
+    /* MAIN CONTENT BELOW HEADER */
+    body.savora-dashboard .dashboard-main,
+    body.savora-recipes .dashboard-main,
+    body.savora-categories .dashboard-main,
+    body.savora-favourites .dashboard-main {
+        width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        padding: 20px 14px !important;
+    }
+}
+
+    /* MAIN CONTENT */
+    .savora-reports .dashboard-main {
+        flex: 1 1 0;
+        width: 0;
+        min-width: 0;
+        padding: 12px 8px !important;
+    }
+
+    /* HEADER */
+    .savora-reports .dashboard-header {
+        padding: 12px !important;
+    }
+
+    .savora-reports .dashboard-date {
+        font-size: 8px !important;
+    }
+
+    .savora-reports .dashboard-header h4 {
+        font-size: 15px !important;
+    }
+
+    .savora-reports .dashboard-header p {
+        font-size: 10px !important;
+    }
+
+    .savora-reports .user-profile {
+        flex-shrink: 0;
+    }
+
+    /* INTRO */
+    .savora-reports .reports-intro h1 {
+        font-size: 23px !important;
+    }
+
+    .savora-reports .reports-intro p {
+        font-size: 11px !important;
+    }
+
+    /* STATISTICS - ONE COLUMN */
+    .savora-reports .reports-stats {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .savora-reports .report-stat-card {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    /* CHARTS - VERTICAL */
+    .savora-reports .reports-chart-grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 16px !important;
+    }
+
+    .savora-reports .report-chart-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 12px !important;
+    }
+
+    .savora-reports .report-section-heading h3 {
+        font-size: 16px !important;
+    }
+
+    .savora-reports .report-chart-container {
+        position: relative;
+        width: 100% !important;
+        height: 230px !important;
+    }
+
+    .savora-reports .report-chart-container canvas {
+        max-width: 100%;
+    }
+
+    /* RECIPE COLLECTION */
+    .savora-reports .report-list-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 12px !important;
+    }
+
+    .savora-reports .report-table {
+        font-size: 10px !important;
+    }
+
+    .savora-reports .table-responsive {
+        overflow-x: auto;
+    }
+
+    /* FAVOURITE COLLECTION */
+    .savora-reports .report-favourite-card {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px;
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 15px !important;
+    }
+
+    .savora-reports .report-favourite-card h3 {
+        font-size: 17px !important;
+    }
+
+    /* FOOTER */
+    .savora-reports .reports-footer {
+        font-size: 10px !important;
+        text-align: center;
+    }
+}
+
+/* REPORTS - SMALLER SIDEBAR & HEADER ON PHONE */
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+
+    /* SIDEBAR */
+    .savora-reports .sidebar {
+        width: 105px !important;
+        min-width: 105px !important;
+        flex: 0 0 105px !important;
+        padding: 15px 6px !important;
+    }
+
+    .savora-reports .sidebar-brand {
+        font-size: 21px !important;
+    }
+
+    .savora-reports .sidebar-image img {
+        height: 60px !important;
+    }
+
+    .savora-reports .sidebar-menu a,
+    .savora-reports .sidebar-logout {
+        font-size: 9px !important;
+        padding: 8px 5px !important;
+    }
+
+    .savora-reports .sidebar-image p {
+        font-size: 9px !important;
+    }
+
+    .savora-reports .sidebar-image small {
+        font-size: 8px !important;
+    }
+
+    /* HEADER */
+    .savora-reports .dashboard-header {
+        min-height: 0 !important;
+        padding: 9px 10px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .savora-reports .dashboard-date {
+        font-size: 7px !important;
+    }
+
+    .savora-reports .dashboard-header h4 {
+        font-size: 13px !important;
+        margin-bottom: 3px !important;
+    }
+
+    .savora-reports .dashboard-header p {
+        font-size: 9px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .savora-reports .user-profile {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 10px !important;
+    }
+}
+/* REPORTS - REMOVE HORIZONTAL SCROLL ON PHONE */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+
+    .savora-reports {
+        overflow-x: hidden !important;
+    }
+
+    .savora-reports .dashboard-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .savora-reports .dashboard-main {
+        width: calc(100% - 105px) !important;
+        max-width: calc(100% - 105px) !important;
+        flex: 1 1 calc(100% - 105px) !important;
+        min-width: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+    .savora-reports .reports-chart-grid,
+    .savora-reports .reports-stats,
+    .savora-reports .report-chart-card {
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+}
+/* REPORTS - FIX PHONE PORTRAIT */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+
+    .savora-reports,
+    .savora-reports .dashboard-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .savora-reports .dashboard-container {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    .savora-reports .sidebar {
+        width: 105px !important;
+        min-width: 105px !important;
+        flex: 0 0 105px !important;
+    }
+
+    .savora-reports .dashboard-main {
+        flex: 1 1 0 !important;
+        width: calc(100% - 105px) !important;
+        min-width: 0 !important;
+        max-width: calc(100% - 105px) !important;
+        overflow-x: hidden !important;
+        padding: 10px 7px !important;
+    }
+
+    .savora-reports .reports-stats,
+    .savora-reports .reports-chart-grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100% !important;
+    }
+
+    .savora-reports .report-stat-card,
+    .savora-reports .report-chart-card,
+    .savora-reports .report-list-card,
+    .savora-reports .report-favourite-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .savora-reports .report-chart-container {
+        width: 100% !important;
+        height: 220px !important;
+    }
+
+    .savora-reports canvas {
+        max-width: 100% !important;
+    }
+}
+.savora-dashboard .recent-section .recipe-card img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    display: block;
+}
+
+.savora-dashboard .recent-section .recipe-card .recipe-info h5 {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    color: #24150F !important;
+}
+/* =========================================
+   SAVORA - MOBILE PORTRAIT REPORTS
+========================================= */
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+
+    /* REPORT CARDS */
+    .savora-reports .report-stat-card,
+    .savora-reports .report-chart-card,
+    .savora-reports .report-list-card,
+    .savora-reports .report-favourite-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* REPORT CHART */
+    .savora-reports .report-chart-container {
+        width: 100% !important;
+        height: 220px !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .savora-reports canvas {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+
+/* =========================================
+   SAVORA - MOBILE PORTRAIT REPORTS
+========================================= */
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+
+    /* REPORT CARDS */
+    .savora-reports .report-stat-card,
+    .savora-reports .report-chart-card,
+    .savora-reports .report-list-card,
+    .savora-reports .report-favourite-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* REPORT CHART */
+    .savora-reports .report-chart-container {
+        width: 100% !important;
+        height: 220px !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .savora-reports canvas {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+
+/* =========================================
+   SAVORA DASHBOARD - RECENT RECIPES IMAGE
+========================================= */
+
+.savora-dashboard .recent-section .recipe-card img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.savora-dashboard .recent-section .recipe-card .recipe-info h5 {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    color: #24150F !important;
+}
+/* =========================================
+   SAVORA - MOBILE PORTRAIT HORIZONTAL HEADER
+   Dashboard, Recipes, Categories, Favourites
+========================================= */
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+
+    /* Layout utama */
+    .savora-dashboard .dashboard-layout,
+    .savora-recipes .dashboard-layout,
+    .savora-categories .dashboard-layout,
+    .savora-favourites .dashboard-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    /* Bar coklat pekat di bahagian atas */
+    .savora-dashboard .sidebar,
+    .savora-recipes .sidebar,
+    .savora-categories .sidebar,
+    .savora-favourites .sidebar {
+        width: 100% !important;
+        min-width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        background: #24150F !important;
+        padding: 18px 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Logo */
+    .savora-dashboard .sidebar-brand,
+    .savora-recipes .sidebar-brand,
+    .savora-categories .sidebar-brand,
+    .savora-favourites .sidebar-brand {
+        color: #F5EFE6 !important;
+        margin: 0 0 12px !important;
+        text-align: left !important;
+    }
+
+    /* Sembunyikan gambar sidebar */
+    .savora-dashboard .sidebar-image,
+    .savora-recipes .sidebar-image,
+    .savora-categories .sidebar-image,
+    .savora-favourites .sidebar-image {
+        display: none !important;
+    }
+
+    /* Menu mendatar */
+    .savora-dashboard .sidebar-menu,
+    .savora-recipes .sidebar-menu,
+    .savora-categories .sidebar-menu,
+    .savora-favourites .sidebar-menu {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .savora-dashboard .sidebar-menu a,
+    .savora-recipes .sidebar-menu a,
+    .savora-categories .sidebar-menu a,
+    .savora-favourites .sidebar-menu a {
+        font-size: 12px !important;
+        padding: 8px 10px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Log out dan copyright */
+    .savora-dashboard .sidebar-bottom,
+    .savora-recipes .sidebar-bottom,
+    .savora-categories .sidebar-bottom,
+    .savora-favourites .sidebar-bottom {
+        position: static !important;
+        margin-top: 12px !important;
+        width: 100% !important;
+    }
+
+    /* Content di bawah bar coklat */
+    .savora-dashboard .dashboard-main,
+    .savora-recipes .dashboard-main,
+    .savora-categories .dashboard-main,
+    .savora-favourites .dashboard-main {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex: 1 1 auto !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* DASHBOARD CHART - MOBILE PORTRAIT */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+
+    .savora-dashboard .chart-container {
+        width: 100% !important;
+        max-width: 280px !important;
+        height: 220px !important;
+        margin: 0 auto !important;
+        padding: 8px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    .savora-dashboard #recipeChart {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+/* DASHBOARD - SMALLER MOBILE CHART */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+
+    body.savora-dashboard .chart-section {
+        margin-top: 20px !important;
+    }
+
+    body.savora-dashboard .chart-container {
+        width: 100% !important;
+        height: 220px !important;
+        max-height: 220px !important;
+        padding: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    body.savora-dashboard .chart-container canvas {
+        max-width: 100% !important;
+        max-height: 190px !important;
+    }
+}
+
+
+/* =========================================
+   SAVORA REPORTS - COMPACT LAYOUT
+========================================= */
+
+.savora-reports .dashboard-main {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    min-width: 0;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.savora-reports .dashboard-header,
+.savora-reports .reports-intro,
+.savora-reports .reports-stats,
+.savora-reports .reports-chart-grid,
+.savora-reports .report-list-card,
+.savora-reports .report-favourite-card,
+.savora-reports .reports-footer {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* SMALLER STATISTIC BOXES */
+.savora-reports .reports-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.savora-reports .report-stat-card {
+    min-width: 0;
+    padding: 16px;
+}
+
+/* CHART BOXES */
+.savora-reports .reports-chart-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.savora-reports .report-chart-card {
+    min-width: 0;
+    padding: 18px;
+}
+
+.savora-reports .report-chart-container,
+.savora-reports .pie-container {
+    height: 220px;
+    max-width: 100%;
+}
+
+/* TABLE BOX */
+.savora-reports .report-list-card {
+    padding: 18px;
+    overflow: hidden;
+}
+
+.savora-reports .table-responsive {
+    max-width: 100%;
+}
+
+/* FAVOURITE BOX */
+.savora-reports .report-favourite-card {
+    padding: 22px;
+    gap: 15px;
+}
+
+/* PREVENT CONTENT OVERFLOW */
+.savora-reports .dashboard-main *,
+.savora-reports .dashboard-main *::before,
+.savora-reports .dashboard-main *::after {
+    box-sizing: border-box;
+}
+
+.savora-reports .report-chart-card canvas {
+    max-width: 100%;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .savora-reports .reports-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .savora-reports .reports-chart-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .savora-reports .dashboard-main {
+        padding: 16px 14px;
+    }
+
+    .savora-reports .dashboard-header {
+        padding: 16px;
+    }
+
+    .savora-reports .reports-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .savora-reports .report-stat-card {
+        padding: 12px;
+    }
+
+    .savora-reports .report-stat-card h2 {
+        font-size: 24px;
+    }
+
+    .savora-reports .reports-chart-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .savora-reports .report-chart-card,
+    .savora-reports .report-list-card {
+        padding: 14px;
+    }
+
+    .savora-reports .report-favourite-card {
+        padding: 18px;
+    }
+
+    .savora-reports .report-favourite-card h3 {
+        font-size: 21px;
+    }
+}
+
+/* REPORTS - LIMIT CONTENT WIDTH */
+
+.savora-reports .dashboard-main {
+    max-width: 1050px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 25px !important;
+}
+
+.savora-reports .reports-stats {
+    gap: 10px !important;
+}
+
+.savora-reports .report-stat-card {
+    padding: 14px !important;
+}
+
+.savora-reports .reports-chart-grid {
+    gap: 12px !important;
+}
+
+.savora-reports .report-chart-card,
+.savora-reports .report-list-card {
+    padding: 16px !important;
+}
+
+.savora-reports .report-chart-container,
+.savora-reports .pie-container {
+    height: 200px !important;
+}
+
+.savora-reports .report-favourite-card {
+    padding: 18px !important;
+}
+
+/* =========================================
+   SAVORA REPORTS - COMPACT STATISTICS
+========================================= */
+
+/* STATISTICS: 3 BOXES PER ROW */
+.savora-reports .reports-stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    margin-bottom: 14px !important;
+}
+
+.savora-reports .report-stat-card {
+    padding: 14px 16px !important;
+    min-width: 0 !important;
+}
+
+.savora-reports .report-stat-card h2 {
+    font-size: 28px !important;
+    margin: 8px 0 4px !important;
+}
+
+/* MOVE CHARTS UP */
+.savora-reports .reports-chart-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    margin-top: 0 !important;
+    margin-bottom: 18px !important;
+}
+
+.savora-reports .report-chart-card {
+    padding: 16px !important;
+    min-width: 0 !important;
+}
+
+.savora-reports .report-chart-container,
+.savora-reports .pie-container {
+    height: 210px !important;
+}
+
+/* SMALLER OTHER BOXES */
+.savora-reports .report-list-card {
+    padding: 18px !important;
+    margin-bottom: 18px !important;
+}
+
+.savora-reports .report-favourite-card {
+    padding: 20px !important;
+    margin-bottom: 18px !important;
+}
+
+/* MOBILE: 2 BOXES PER ROW */
+@media (max-width: 600px) {
+    .savora-reports .reports-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .savora-reports .reports-chart-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+.savora-reports .reports-stats {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    margin-bottom: 14px !important;
+}
